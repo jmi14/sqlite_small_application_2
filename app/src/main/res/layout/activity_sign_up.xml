@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hpfolio.reapplication.SignUp">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/ilName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Name"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="66dp"
+            android:layout_marginStart="66dp"
+            android:layout_marginTop="24dp"
+            android:inputType="textPersonName" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/ilEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ilName">
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/ilName"
+            android:layout_marginLeft="66dp"
+            android:layout_marginStart="66dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/ilPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ilEmail">
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/ilEmail"
+            android:layout_marginLeft="66dp"
+            android:layout_marginStart="66dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword" />
+    </android.support.design.widget.TextInputLayout>
+<android.support.design.widget.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ilPhone"></android.support.design.widget.TextInputLayout>
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ilPassword"
+        android:layout_marginLeft="66dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="Phone"
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etPhone"
+        android:layout_marginTop="43dp"
+        android:text="Register"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"/>
+
+    <TextView
+        android:id="@+id/tvRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etPhone"
+        android:layout_alignStart="@+id/etPhone"
+        android:layout_below="@+id/btnSignUp"
+        android:layout_marginTop="13dp"
+        android:text="@string/signup_register" />
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="2dp"
+
+        android:text="@string/signup_login"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:layout_alignBaseline="@+id/tvRegister"
+        android:layout_alignBottom="@+id/tvRegister"
+        android:layout_toRightOf="@+id/etPhone"
+        android:layout_toEndOf="@+id/etPhone" />
+</RelativeLayout>

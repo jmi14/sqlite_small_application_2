@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ReApplication</string>
+    <string name="signup_register">Are you already registered? Please </string>
+    <string name="signup_login">Login </string>
+</resources>
