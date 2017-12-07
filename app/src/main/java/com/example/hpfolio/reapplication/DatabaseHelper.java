@@ -12,10 +12,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    private static final String database_name = "MyDatabase";
+    private static final String database_name = "MyDatabase3";
     private static final String table_name = "signup";
     private static final String table_col_name = "signup";
-    private static final int db_version = 1;
+    private static final int db_version = 3;
 
     public DatabaseHelper(Context context) {
         super(context, database_name, null, db_version);

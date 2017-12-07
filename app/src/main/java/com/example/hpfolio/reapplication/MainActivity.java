@@ -10,12 +10,13 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
 
     ImageView ivHomper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ivHomper = (ImageView)findViewById(R.id.ivHomper);
+        ivHomper = (ImageView) findViewById(R.id.ivHomper);
 
         ivHomper.animate().alpha(0.1f).setDuration(3000);
 
@@ -24,10 +25,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                Intent intent = new Intent(MainActivity.this,SignUp.class);
+                Intent intent = new Intent(MainActivity.this, SignUp.class);
                 startActivity(intent);
+                finish();
             }
-        },3000);
+        }, 3000);
 
     }
 }
