@@ -10,11 +10,17 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
 
     ImageView ivHomper;
+    SessionManagement sessionManagement;
+    boolean isLoggedIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        sessionManagement = new SessionManagement(this);
+        isLoggedIn = sessionManagement.get_userLoggenIn();
 
         ivHomper = (ImageView) findViewById(R.id.ivHomper);
 
@@ -25,10 +31,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                Intent intent = new Intent(MainActivity.this, SignUp.class);
-                startActivity(intent);
-                finish();
+                if (isLoggedIn) {
+
+                    Intent intent = new Intent(MainActivity.this, UserInformation.class);
+                    startActivity(intent);
+                } else {
+                    Intent intent = new Intent(MainActivity.this, SignUp.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
+
         }, 3000);
 
     }
